@@ -1,0 +1,79 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define cobra_69xp
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0)
+
+using ll = long long int;
+using ull = unsigned long long int;
+
+#define all(x) x.begin(), x.end()
+#define rall(x) x.rbegin(), x.rend()
+
+#define in insert
+#define pb push_back
+#define ff first
+#define ss second
+#define mp make_pair
+#define ub upper_bound
+#define lb lower_bound
+#define sp " "
+#define endl "\n"
+#define nl cout << "\n"
+#define YES cout << "YES\n"
+#define NO cout << "NO\n"
+#define Yes cout << "Yes\n"
+#define No cout << "No\n"
+#define debug(x) cout << "Debug of " << #x << ": " << x << endl;
+
+const int mod = 1e9 + 7;
+
+bool odd(ll num) { return ((num & 1) == 1); }
+bool even(ll num) { return ((num & 1) == 0); }
+ll sum(ll n) { return ((n * (n + 1)) / 2); }
+ll ceil(ll a, ll b) { return ((a + (b - 1)) / b); }
+
+void InputOutput()
+{
+#ifndef ONLINE_JUDGE
+    freopen("E:/Programming File/input.txt", "r", stdin);
+    freopen("E:/Programming File/output.txt", "w", stdout);
+#endif
+}
+
+void solve()
+{
+    int n,k;
+    cin>>n>>k;
+    int x = 0;
+    if(n==1 ){
+    cout<<1<<endl<<1<<endl;
+    return;
+    }
+     if(k==1 || n==k)cout<<-1<<endl;
+    else{
+        if(k%2==0){
+            cout<<3<<endl;
+            cout<<1<<sp<<k<<sp<<k+1<<endl;
+        }
+        else {
+            cout<<3<<endl;
+            cout<<1<<sp<<k-1<<sp<<k+2<<endl;
+        }
+    }
+}
+
+int main()
+{
+    optimize();
+
+    ll tc = 1;
+    cin >> tc;
+    while(tc--)
+    {
+
+        solve();
+    }
+
+    return 0;
+}
